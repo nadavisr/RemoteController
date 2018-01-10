@@ -1,0 +1,26 @@
+{
+  "configuration": {
+    "connectivity": {
+      "ip": "localhost"
+    },
+    "video": {
+      "port": 4445,
+      "rendering_frequency_millisecond": 33
+    },
+    "bits": {
+      "running_frequency_millisecond": 5000
+    },
+    "driving": {
+      "command_frequency_millisecond": 50
+    },
+    "map": {
+      "port": 4446,
+      "rendering_frequency_millisecond": 1500
+    },
+    "ble": {
+      "service_string_uuid": "9F71AA7E-6F58-441D-9B3B-F21F3C38A279",
+      "characteristic_echo_string_uuid": "02A422E2-8F73-4FDB-B822-E77D96C39E62",
+      "scan_period_millisecond": 5000
+    }
+  }
+}

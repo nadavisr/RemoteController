@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Robot">
+
+        <EditTextPreference
+            android:capitalize="words"
+            android:defaultValue="@string/pref_defaultValue_robot_id"
+            android:inputType="textCapWords"
+            android:key="@string/pref_key_robot_id"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/pref_title_robot_id" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Application">
+
+        <EditTextPreference
+            android:capitalize="words"
+            android:defaultValue="@string/pref_defaultValue_display_name"
+            android:inputType="textCapWords"
+            android:key="@string/pref_key_display_name"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/pref_title_display_name" />
+
+        <!-- NOTE: ListPreference's summary should be set to its value by the activity code. -->
+        <ListPreference
+            android:defaultValue="@string/pref_defaultValue_video_quality"
+            android:entries="@array/pref_titles_video_quality"
+            android:entryValues="@array/pref_values_video_quality"
+            android:key="@string/pref_key_video_quality"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"
+            android:title="@string/pref_title_video_quality" />
+
+        <ListPreference
+            android:defaultValue="@string/pref_defaultValue_sync_frequency"
+            android:entries="@array/pref_titles_sync_frequency"
+            android:entryValues="@array/pref_values_sync_frequency"
+            android:key="@string/pref_key_sync_frequency"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"
+            android:title="@string/pref_title_sync_frequency" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Developers">
+
+        <SwitchPreference
+            android:defaultValue="@string/pref_defaultValue_debug_mode"
+            android:key="@string/pref_key_debug_mode"
+            android:summary="@string/pref_summary_debug_mode"
+            android:title="@string/pref_title_debug_mode" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

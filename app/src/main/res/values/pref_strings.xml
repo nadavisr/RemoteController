@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_key_display_name">display_name</string>
+    <string name="pref_defaultValue_display_name">User</string>
+
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string name="pref_key_sync_frequency">sync_frequency</string>
+    <string name="pref_defaultValue_sync_frequency">30</string>
+
+
+    <string name="pref_defaultValue_video_quality">33</string>
+    <string name="pref_title_video_quality">Video Quality</string>
+    <string name="pref_key_video_quality">pref_key_video_quality</string>
+
+
+    <string name="pref_key_robot_id">pref_key_robot_id</string>
+    <string name="pref_defaultValue_robot_id">Robot-1</string>
+    <string name="pref_title_robot_id">Robot ID</string>
+
+
+    <string name="pref_key_debug_mode">pref_key_debug_mode</string>
+    <string name="pref_defaultValue_debug_mode">false</string>
+    <string name="pref_summary_debug_mode">If the application work in debug mode.</string>
+    <string name="pref_title_debug_mode">Debug Mode</string>
+
+
+</resources>

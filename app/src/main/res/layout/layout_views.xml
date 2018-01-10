@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="310dp"
+    android:layout_height="280dp">
+
+    <!--<com.example.admin.myapplication.driveControl.JoystickDebugView-->
+        <!--android:id="@+id/joystick_view_debug"-->
+        <!--android:layout_width="280dp"-->
+        <!--android:layout_height="280dp"-->
+        <!--android:visibility="invisible" />-->
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/map_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.example.admin.myapplication.map.MapView
+            android:id="@+id/map_view"
+            android:layout_width="280dp"
+            android:layout_height="260dp" />
+
+        <SeekBar
+            android:id="@+id/map_seek_bar"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="5dp"
+            android:alpha="0.2"
+            android:max="5"
+            android:progress="0" />
+
+        <ImageButton
+            android:id="@+id/btn_display_origin"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="3dp"
+            android:background="@null"
+            android:contentDescription="Display\hide the origins."
+            android:src="@drawable/ic_my_location_holo_dark" />
+
+        <ImageButton
+            android:id="@+id/btn_tracking_cursor"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/btn_display_origin"
+            android:layout_marginTop="3dp"
+            android:background="@null"
+            android:contentDescription="Turn on\off the tracking the cursor."
+            android:src="@drawable/ic_visibility_holo_dark"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/map_view_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="start|top"
+        android:layout_marginEnd="@dimen/half_horizontal_margin"
+        android:layout_marginStart="@dimen/half_horizontal_margin"
+        android:layout_marginTop="@dimen/half_vertical_margin"
+        android:background="@null"
+        android:contentDescription="Minimize\Maximize view button."
+        android:src="@drawable/ic_map_holo_dark" />
+
+    <!--<ImageButton-->
+        <!--android:id="@+id/joystick_view_debug_button"-->
+        <!--android:layout_width="30dp"-->
+        <!--android:layout_height="30dp"-->
+        <!--android:layout_below="@id/map_view_button"-->
+        <!--android:layout_marginEnd="@dimen/half_horizontal_margin"-->
+        <!--android:layout_marginStart="@dimen/half_horizontal_margin"-->
+        <!--android:layout_marginTop="@dimen/half_vertical_margin"-->
+        <!--android:background="@null"-->
+        <!--android:contentDescription="Minimize\Maximize view button."-->
+        <!--android:src="@drawable/ic_adb_holo_dark" />-->
+</RelativeLayout>

@@ -1,0 +1,73 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.android.application'
+apply plugin: 'maven'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '26.0.2'
+
+    defaultConfig {
+        applicationId "com.example.admin.myapplication"
+        minSdkVersion 24
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    aaptOptions
+            {
+                noCompress "tflite"
+            }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    compile 'com.android.support:appcompat-v7:25.4.0'
+    compile 'com.android.support:design:25.4.0'
+
+    testCompile 'junit:junit:4.12'
+
+    // MessagePack -
+    compile 'org.msgpack:msgpack:0.6.11'
+
+    //Log -
+    compile 'com.jakewharton.timber:timber:4.5.1'
+    compile 'org.slf4j:slf4j-api:1.7.21'
+    compile('com.github.tony19:logback-android-core:1.1.1-6') {
+        exclude module: 'android'
+    }
+    compile('com.github.tony19:logback-android-classic:1.1.1-6') {
+        exclude module: 'android'
+    }
+
+    //Butter Knife -
+    compile 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    //Gson -
+    compile 'com.google.code.gson:gson:2.8.0'
+
+    //Arduino
+    compile project(':droid2ino')
+
+    compile 'com.writingminds:FFmpegAndroid:0.3.2'
+    compile 'org.tensorflow:tensorflow-lite:+'
+
+}

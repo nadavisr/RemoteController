@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by admin on 23/10/2017
+  ~ Last modified 15:47 23/10/17
+  -->
+
+<resources>
+
+    <declare-styleable name="JoystickView">
+
+        <attr name="button_image" format="reference" />
+
+        <attr name="button_color" format="color" />
+
+        <attr name="button_alpha" format="integer" />
+
+        <attr name="button_size_ratio" format="fraction" />
+
+        <attr name="background_color" format="color" />
+
+        <attr name="background_alpha" format="integer" />
+
+        <attr name="background_border_width" format="dimension" />
+
+        <attr name="background_border_color" format="color" />
+
+        <attr name="fixed_center" format="boolean" />
+
+        <attr name="auto_recenter_button" format="boolean" />
+
+        <attr name="enabled" format="boolean" />
+
+        <attr name="button_direction" format="enum">
+            <enum name="horizontal" value="-1" />
+            <enum name="both" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+
+    </declare-styleable>
+</resources>
