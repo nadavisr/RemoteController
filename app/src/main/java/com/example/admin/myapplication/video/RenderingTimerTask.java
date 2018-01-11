@@ -8,7 +8,6 @@ package com.example.admin.myapplication.video;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.Paint;
 import android.util.Log;
 import android.widget.TextView;
 
@@ -18,7 +17,7 @@ import java.util.TimerTask;
 
 import businessLogic.droneVideoProvider.FFmpegService;
 import businessLogic.droneVideoProvider.ImageProvider;
-import ffmpegLoad.ImageClassifier;
+import businessLogic.droneVideoProvider.ImageClassifier;
 
 /**
  * <P>Project: RemoteController.</P>

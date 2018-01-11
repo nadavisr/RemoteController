@@ -1,9 +1,14 @@
 /*
+ * Created by nadavi on 11/01/2018
+ * Last modified 1/10/18 10:57 AM
+ */
+
+/*
  * Created by Administrator on 09/01/2018
  * Last modified 15:22 09/01/18
  */
 
-package ffmpegLoad;
+package businessLogic.droneVideoProvider;
 
 import android.app.Activity;
 import android.content.Context;

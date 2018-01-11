@@ -7,8 +7,6 @@ package businessLogic.droneVideoProvider;
 
 import android.content.Context;
 
-import ffmpegLoad.FFmpegLoader;
-
 /**
  * Created by Administrator on 02/01/2018.
  */

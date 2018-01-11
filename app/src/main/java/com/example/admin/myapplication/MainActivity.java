@@ -35,22 +35,16 @@ import com.example.admin.myapplication.common.Intents;
 import com.example.admin.myapplication.fragments.VideoFragment;
 import com.example.admin.myapplication.listeners.RobotListener;
 import com.example.admin.myapplication.notification.NotificationManager;
-import com.github.hiteshsondhi88.libffmpeg.FFmpeg;
-import com.github.hiteshsondhi88.libffmpeg.LoadBinaryResponseHandler;
-import com.github.hiteshsondhi88.libffmpeg.exceptions.FFmpegNotSupportedException;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import businessLogic.common.BaseUncaughtExceptionHandler;
 import businessLogic.common.interfaces.ILog;
 import businessLogic.common.interfaces.IUncaughtExceptionHandler;
-import businessLogic.droneVideoProvider.FFmpegLocal;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
-import ffmpegLoad.ImageClassifier;
 import services.logging.LogManager;
 
 /**
