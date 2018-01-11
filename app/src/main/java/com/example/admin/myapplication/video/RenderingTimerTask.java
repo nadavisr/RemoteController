@@ -66,55 +66,54 @@ class RenderingTimerTask extends TimerTask {
 
             imageCount++;
 
-            if (imageCount%2 != 0)
-            return;
+            if (imageCount % 2 != 0)
+                return;
 
-                if(imageCount%10 == 0){
-                    String answer = imageClassifier.classifyFrame(rgb);
-                    String[] arr = answer.split("\n");
-                    if (arr != null && arr.length>0) {
-                        String[] data= arr[1].split(":");
-                        if (data != null && data.length>1) {
-                            double precentInDoub = Double.valueOf(data[1]);
-                            int precent = (int) (precentInDoub * 100);
-                            if (precent > 50) {
-                                String cla = data[0] + " " + precent + "%";
-                                try {
-                                    ((Activity) context).runOnUiThread(new Runnable() {
-                                        @Override
-                                        public void run() {
-                                            m_textview.setText(cla);
+            if (imageCount % 10 == 0)
+            {
 
-                                        }//public void run() {
-                                    });
+                String answer = imageClassifier.classifyFrame(rgb);
+                String[] arr = answer.split("\n");
+                if (arr != null && arr.length > 0) {
+                    String[] data = arr[1].split(":");
+                    if (data != null && data.length > 1) {
+                        double precentInDoub = Double.valueOf(data[1]);
+                        int precent = (int) (precentInDoub * 100);
+                        if (precent > 50) {
+                            String cla = data[0] + " " + precent + "%";
+                            try {
+                                ((Activity) context).runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        m_textview.setText(cla);
 
-                                } catch (Exception exc) {
-                                    Log.e("Error", exc.getMessage());
-                                }
+                                    }//public void run() {
+                                });
+
+                            } catch (Exception exc) {
+                                Log.e("Error", exc.getMessage());
                             }
-                            else
-                            {
-                                try {
-                                    ((Activity) context).runOnUiThread(new Runnable() {
-                                        @Override
-                                        public void run() {
-                                            m_textview.setText("");
+                        } else {
+                            try {
+                                ((Activity) context).runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        m_textview.setText("");
 
-                                        }//public void run() {
-                                    });
+                                    }//public void run() {
+                                });
 
-                                } catch (Exception exc) {
-                                    Log.e("Error", exc.getMessage());
-                                }
+                            } catch (Exception exc) {
+                                Log.e("Error", exc.getMessage());
                             }
                         }
                     }
                 }
+            }
 
+            byte[] newArr = new byte[width * hight * 4];
 
-           byte[] newArr = new byte[width*hight*4];
-
-            for(int i=0; i< hight; i++) {
+            for (int i = 0; i < hight; i++) {
                 for (int j = 0; j < width; j++) {
                     int offset = (i * hight + j) * 3;
                     int newOffset = (i * hight + j) * 4;
@@ -124,15 +123,15 @@ class RenderingTimerTask extends TimerTask {
                         newArr[newOffset + 2] = rgb[offset];
                         newArr[newOffset + 3] = (byte) 255;
                     }
-
                 }
             }
-            Bitmap bm = Bitmap.createBitmap(width, hight, Bitmap.Config.ARGB_8888);
-            bm.copyPixelsFromBuffer(ByteBuffer.wrap(newArr));
-//            Bitmap bm = Bitmap.createBitmap(width, hight, Bitmap.Config.ARGB_8888);
-//            bm.copyPixelsFromBuffer(ByteBuffer.wrap(rgb));
-            m_videoSurface.setDroneBitmap(bm);
-            }
+
+
+            Bitmap orig = Bitmap.createBitmap(width, hight, Bitmap.Config.ARGB_8888);
+            orig.copyPixelsFromBuffer(ByteBuffer.wrap(newArr));
+
+            m_videoSurface.setDroneBitmap(orig);
+        }
 
     };
 

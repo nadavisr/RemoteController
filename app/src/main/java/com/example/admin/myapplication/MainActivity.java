@@ -101,8 +101,7 @@ public class MainActivity extends BaseBluetoothSendOnlyActivity implements Robot
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-/*
-        FFmpeg ffmpeg = FFmpeg.getInstance(this);
+/*        FFmpeg ffmpeg = FFmpeg.getInstance(this);
         try {
             ffmpeg.loadBinary(new LoadBinaryResponseHandler() {
 
@@ -120,8 +119,7 @@ public class MainActivity extends BaseBluetoothSendOnlyActivity implements Robot
             });
         } catch (FFmpegNotSupportedException e) {
             // Handle if FFmpegLocal is not supported by device
-        }
-*/
+        }*/
 
 
         hideSystemUI();

@@ -49,8 +49,8 @@ public class FFmpegExecuteAsyncTask extends AsyncTask<Void, String, CommandResul
     private final int TCP_PORT = 8888;
     private final int UDP_PORT = 8895;
     private final int BUFFER_SIZE = 8192;
-    private final int WIDTH = 224;
-    private final int HEIGHT = 224;
+    private final int WIDTH = 720;
+    private final int HEIGHT = 576;
     private byte[] magicBytesCtrl;
     private byte[][] magicBytesVideo1;
     private byte[] magicBytesVideo2;
